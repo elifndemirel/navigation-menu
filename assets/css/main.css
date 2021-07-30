@@ -1,0 +1,62 @@
+body{
+    background-color: black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+.logo{
+    height: 90px;
+    filter: invert(100%) sepia(13%) saturate(2871%) hue-rotate(8deg) brightness(116%) contrast(92%);
+}
+.nav-item a{
+    color: beige;
+}
+.nav-item a:hover{
+    color: burlywood;
+}
+.line{
+    width: 0px;
+    height: 1px;
+    background-color: beige;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+a:hover + .line{
+    width: 100%;
+    visibility: visible;
+}
+.menu-toggle{
+    height: 50px;
+    filter: invert(100%) sepia(13%) saturate(2871%) hue-rotate(8deg) brightness(116%) contrast(92%);
+    display: none;
+}
+.animation{
+    animation: slideInRight; 
+    animation-duration: 0.5s;
+}
+@media screen and (max-width: 992px) {
+    .menu-toggle{
+        display: block;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .collapse{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        background-color: maroon;
+    }
+    .open-close{
+        display: flex !important;
+    }
+    .navbar-nav{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-item{
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+}
